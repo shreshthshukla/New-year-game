@@ -54,6 +54,7 @@ function setup(){
 
   bye20 = createSprite(width/2,height/2)
   bye20.addImage(bye20I);
+  bye20.scale=width/1000
   bye20.visible=false;
 
   newyear = createSprite(width/6,height/6)
@@ -107,7 +108,7 @@ function draw(){
   if(gameState===1){
     fill("blue")
     stroke("red")
-    textSize(20)
+    textSize(width/50)
     text("Score "+score,width/2,height/6);
     cor();
     start.destroy();
