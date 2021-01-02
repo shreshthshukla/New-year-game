@@ -47,10 +47,10 @@ function setup(){
 
   coronaGroup = new Group();
 
-  newYear = createSprite(width/2,height/2);
+  newYear = createSprite(width/2,height/2+10000);
   newYear.addImage(newYearI)
   newYear.scale=width/1500;
-  newYear.visible=false;
+  // newYear.visible=false;
 
   bye20 = createSprite(width/2,height/2)
   bye20.addImage(bye20I);
@@ -59,6 +59,7 @@ function setup(){
 
   newyear = createSprite(width/6,height/6)
   newyear.addImage(newyearI);
+  newyear.debug=true
   newyear.scale=width/2000
   newyear.visible=false;
 
@@ -90,8 +91,8 @@ function draw(){
 
     if(touches.length>0||keyDown("N")){
       bye20.destroy();
-      newYear.visible=true;
-      touches=[]
+      newYear.y=height/2
+      touches=[];
     }
     if(touches.length>0||keyDown("S")){
       newYear.destroy();
